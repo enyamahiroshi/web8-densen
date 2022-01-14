@@ -1,0 +1,81 @@
+/* ----------------------------------------------------------------
+  フッター
+---------------------------------------------------------------- */
+footer{
+  z-index: 1;
+  //contact
+  .sec-contact{
+    padding-bottom: 20px;
+    .cont_wrap{
+      .contact_txt{
+        margin-bottom: 30px;
+      }
+      .contact_form_wrap{
+        margin: 0 auto;
+      }
+    }
+  }
+  //フッターインフォ
+  .footer_info{
+    padding: 30px 20px 25px;
+    text-align: center;
+    background-color: $c-gray_light;
+    h6{
+      font-size: 1.3rem;
+      line-height: 1em;
+      margin-bottom: 10px;
+    }
+    .logoset{
+      width: 50%;
+      margin: 0 auto 15px;
+    }
+    .infobox{
+      a{
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        &:link, &:visited{
+          color: $c-gray;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  footer{
+    //contact
+    .sec-contact{
+      padding-right: 13.5%;
+      padding-bottom: 50px;
+      .cont_wrap{
+        .contact_txt{
+          margin-bottom: 50px;
+        }
+        .contact_form_wrap{
+        }
+      }
+    }
+    //フッターインフォ
+    .footer_info{
+      padding: 50px 0 35px;
+      h6{
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+      .logoset{
+        width: 210px;
+        margin: 0 auto 15px;
+      }
+      .infobox{
+        display: flex;
+        justify-content: center;
+        a{
+          font-size: 1.8rem;
+          margin: 0 15px;
+          &:hover, &:active{
+            color: $c-link;
+          }
+        }
+      }
+    }
+  }
+}

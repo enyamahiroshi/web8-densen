@@ -1,0 +1,26 @@
+//MV内のロゴ
+@keyframes mvLogo{
+  0%{
+    transform: scale(0.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+//グレースケールの値が変化
+@keyframes reGrayscale{
+  0%{
+    filter: grayscale(100%);
+  }
+  100%{
+    filter: grayscale(70%);
+  }
+}
+
+//下への矢印
+@keyframes forUnder{
+  100%{
+    bottom: 25px;
+  }
+}

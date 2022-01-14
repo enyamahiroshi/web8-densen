@@ -1,0 +1,211 @@
+/* ----------------------------------------------------------------
+  共通
+---------------------------------------------------------------- */
+//記事情報
+.entry_data{
+  line-height: 1.8em;
+  //日付
+  .entry_date{
+    font-size: 1.4rem;
+    line-height: 1em;
+    margin-bottom: 6px;
+  }
+  //カテゴリー
+  .entry_category{
+    margin: 0 17px;
+    ul{
+      li{
+        padding: 0;
+        margin: 0;
+        a{
+          display: inline-block;
+          padding: 0 16px;
+          margin-bottom: 5px;
+          font-size: 1.3rem;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 10px;
+          transition: all 0.5s;
+          &:link, &:visited{
+            text-decoration: none;
+            color: #fff;
+            background: #ee8222;
+          }
+          &:hover, &:active{
+            background: #FF7BAC;
+          }
+        }
+      }
+    }
+  }
+  //タイトル
+  .entry_title{
+    margin-bottom: 12px;
+    a{
+      &:link, &:visited{
+        color: $c-base;
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .entry_data{
+    font-size: 1.4rem;
+    line-height: 1.7em;
+    //日付
+    .entry_date{
+      line-height: 1em;
+      margin-bottom: 6px;
+    }
+    //カテゴリー
+    .entry_category{
+      ul{
+        li{
+          a{
+            min-width: 120px;
+            padding: 0 12px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    //タイトル
+    .entry_title{
+      margin-bottom: 12px;
+      a{
+        &:link, &:visited{
+          color: $c-base;
+        }
+      }
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  アーカイブ / リスト
+---------------------------------------------------------------- */
+.entry_archive_wrap{
+  padding: 196px 16px 20px;
+  background-color: #e3e3e0;
+}
+.entry_list_wrap{
+  width: 100%;
+  padding: 0;
+  margin: 0 auto 20px;
+  .entry_list{
+    text-align: left;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    li{
+      margin: 20px 0;
+      //記事情報
+      .entry_data{
+        width: 100%;
+        padding: 0;
+        //日付
+        .entry_date{
+          display: inline-block;
+          margin: 0 8px 0 0;
+        }
+        //カテゴリー
+        .entry_category{
+          display: inline-block;
+          margin: 0;
+        }
+        //タイトル
+        .entry_title{
+          width: 100%;
+          margin: 0;
+          a{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .entry_title_title{
+
+            }
+            .entry_title_more{
+              margin-left: auto;
+              font-size: 1.2rem;
+              color: #4158d0;
+            }
+            .arrow{
+              width: 7px;
+              height: 9px;
+              margin: 2px 0 0 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .entry_archive_wrap{
+    padding: 96px 16px 20px;
+    background-color: #e3e3e0;
+  }
+  .entry_list_wrap{
+    max-width: 800px;
+    margin: 0 auto 40px;
+    .entry_list{
+      text-align: left;
+      padding: 0 35px;
+      li{
+        margin: 13px 0;
+        //記事情報
+        .entry_data{
+          display: flex;
+          align-items: center;
+          //日付
+          .entry_date{
+            margin-right: 0;
+          }
+          //カテゴリー
+          .entry_category{
+            margin: 0 17px;
+          }
+          //タイトル
+          .entry_title{
+            width: 100%;
+            margin: 0;
+            a{
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              .entry_title_title{
+
+              }
+              .entry_title_more{
+                margin-left: auto;
+                font-size: 1.2rem;
+                color: #4158d0;
+              }
+              .arrow{
+                width: 7px;
+                height: 9px;
+                margin: 2px 0 0 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  記事個別ページ
+---------------------------------------------------------------- */
+.entry_wrap{
+  padding: 16px 16px 70px;
+}
+
+//本文
+.entry_body{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #9ea095;
+}

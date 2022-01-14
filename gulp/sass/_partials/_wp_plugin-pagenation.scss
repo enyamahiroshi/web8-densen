@@ -1,0 +1,137 @@
+/* ------------------------------------
+//  ページネーション（プラグイン「WP-PageNavi」）
+// ----------------------------------*/
+/* wrap */
+.wp-pagenavi{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* 数字を囲むbox */
+.wp-pagenavi span,
+.wp-pagenavi a{
+  margin: 0 4px;
+  padding: 6px 10px;
+  line-height: 1em;
+  display: inline-block;
+}
+.wp-pagenavi a{
+  &:link,
+  &:visited{
+    border: 1px solid $c-base;
+    background-color: transparent;
+    color: $c-base;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active{
+    background-color: $c-base;
+    color: #fff;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+/* 次、前 */
+.wp-pagenavi a.nextpostslink,
+.wp-pagenavi a.previouspostslink{
+  font-size: 180%;
+  padding: 6px 5px 6px 0;
+  border-color: transparent;
+  position: relative;
+  top: 3px;
+}
+.wp-pagenavi a.nextpostslink{ padding: 6px 0 6px 5px; }
+/* カレント */
+.wp-pagenavi span.current{
+  border: 1px solid $c-base;
+  background-color: $c-base;
+  color: #fff;
+  font-weight: normal;
+}
+/* △／○ ページ */
+.wp-pagenavi span.pages{
+  color: $c-base;
+  border: 1px solid $c-base;
+}
+@media (min-width: $break){
+  /* wrap */
+  .wp-pagenavi{
+    margin: -40px 0 120px;
+  }
+  /* 数字を囲むbox */
+  .wp-pagenavi span,
+  .wp-pagenavi a{
+    margin: 0 5px;
+  }
+}
+
+
+/* ------------------------------------
+//  個別ページでの前後の記事
+// ----------------------------------*/
+.pagenation{
+  position: relative;
+  display: table;
+  margin: 80px auto 30px;
+  padding-top: 30px;
+  width: 100%;
+  border-top: 1px solid $c-base;
+}
+
+/*共通*/
+.pagenation div{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+.pagenation a{
+  line-height: 30px;
+}
+.pagenation a:link,
+.pagenation a:visited{
+  text-decoration: none;
+}
+.pagenation a:hover,
+.pagenation a:active{
+  text-decoration: none;
+}
+.pagenation i{
+  display: inline;
+  line-height: 30px;
+}
+
+/*一覧に戻る*/
+.pagenation .button{
+  width: 24%;
+  text-align: center;
+}
+.pagenation .button a{
+  display: block;
+  padding: 5px 0;
+  border-radius: 5px;
+  &:link,
+  &:visited{
+    background-color: $c-key;
+    color: #fff;
+  }
+  &:hover,
+  &:active{
+    opacity: 0.7;
+  }
+}
+
+/*前の記事、次の記事*/
+.pagenation .prev,
+.pagenation .next{
+  width: 38%;
+}
+.pagenation .prev{
+  text-align: left;
+}
+.pagenation .next{
+  text-align: right;
+}
+
+.pagenation .next i{
+  margin: 0 0 0 5px;
+}

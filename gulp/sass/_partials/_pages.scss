@@ -1,0 +1,544 @@
+/* ----------------------------------------------------------------
+
+  各ページ毎
+
+---------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------
+  各ページ共通
+---------------------------------------------------------------- */
+//アイコン
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//見出し
+.cont_title{
+  margin-bottom: 0;
+  text-align: center;
+  .img-title{
+    width: auto;
+    height: 35px;
+    fill: $c-gray_light;
+  }
+}
+@media (min-width: $break){
+  .cont_title_wrap{
+    margin-left: -60px;
+    text-align: left;
+    line-height: 1;
+    position: relative;
+    &::after{
+      content: "";
+      width: 200%;
+      height: 1px;
+      background-color: $c-gray;
+      position: absolute;
+      right: -100%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+  }
+  .cont_title{
+    display: inline-block;
+    padding-right: 20px;
+    z-index: 1;
+    position: relative;
+    &::after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $c-base;;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .img-title{
+      width: auto;
+      height: 55px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+//GoogleMap
+.gmap_wrap {
+  height: 300px;
+  overflow: hidden;
+  iframe{
+    width: 100%;
+    height: 100%;;
+  }
+}
+@media (min-width: $break){
+  .gmap_wrap {
+    height: 430px;
+  }
+}
+
+//テキストブロック
+.txt_bloc{
+  width: auto;
+  text-align: center;
+  h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6em;
+    color: #ff604a;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  p{
+    text-align: left;
+  }
+  .btn{
+    margin-top: 15px;
+  }
+}
+@media (min-width: $break){
+  .txt_bloc{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    h3{
+      font-size: 2.1rem;
+      line-height: 1.7em;
+      margin-bottom: 25px;
+    }
+    p{}
+    .btn{
+      margin-top: 30px;
+    }
+  }
+}
+
+// Filter
+// filter: brightness(10%); //明るさ
+// filter: contrast(300%); //コントラスト
+// filter: grayscale(100%); //グレースケール
+// filter: saturate(80%); //彩度
+// filter: sepia(100%); //セピア
+// filter: hue-rotate(90deg); //色相回転（0deg変化なし、360degで一周）
+// filter: invert(100%); //階調反転
+// filter: blur(100px); //ぼかし
+.filter-brightness{
+  filter: brightness(55%);
+}
+.filter-saturate{
+  filter: saturate(55%);
+}
+
+//共通ブロック
+.cont_wrap{
+  margin-top: 30px;
+}
+@media (min-width: $break){
+  .cont_wrap{
+    margin-top: 50px;
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  HOME
+---------------------------------------------------------------- */
+//mv_wrap
+.mv_wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10% 8%;
+  overflow: hidden;
+  position: relative;
+
+  //ロゴ SVG
+  .logoset{
+    .logo-path{
+      transform: scale(0);
+    }
+
+    //do-actionクラスが付与されたら（読み込みが完了後付与）
+    &.do-action{
+      @for $i from 0 through 8 {
+        .logo-path---#{$i} {
+          animation-name: mvLogo;
+          animation-duration: 0.1s;
+          animation-timing-function: ease-out;
+          animation-delay: #{$i * 0.01}s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+  }
+  //下への矢印
+  .scrl-arrow{
+    display: block;
+    width: 30px;
+    height: 17px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: -1;
+    svg.arrow-bottom{
+      vertical-align: top;
+      path{
+        width: 100%;
+        fill: $c-gray;
+      }
+    }
+    // animation: forUnder 0.8s ease-out -2s infinite alternate;
+  }
+}
+@media (min-width: $break){
+  .mv_wrap{
+    padding: 0 16% 3%;
+    //ロゴ SVG
+    .logoset{
+    }
+    //下への矢印
+    .scrl-arrow{
+      width: 36px;
+      height: 20px;
+    }
+  }
+}
+
+//about
+.sec-about{
+}
+.about_txt{
+  margin-bottom: 30px;
+}
+.profile{
+  padding: 20px 25px 0;
+  text-align: center;
+  border: 1px solid $c-gray;
+  h5{
+    margin-bottom: 15px;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+  .prof-photo{
+    margin-bottom: 20px;
+    text-align: center;
+    img{
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 13px;
+    }
+  }
+  h6{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 600;
+    span{
+      display: block;
+      font-size: 1.2rem;
+    }
+  }
+  p{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .sns_share{
+    margin-top: 30px;
+    .sns_list{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li{
+        margin: 0 10px 20px;
+        img{
+          width: auto;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .sec-about{
+    .cont_wrap{
+      .about_txt{
+        margin-bottom: 30px;
+      }
+      .profile{
+        padding: 35px 20px 40px 40px;
+        text-align: left;
+        h5{
+          margin-bottom: 25px;
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .prof-data-wrap{
+          display: flex;
+          justify-content: flex-start;
+          .prof-photo{
+            width: 170px;
+            min-width: 170px;
+            margin-bottom: 0;
+            img{
+              width: 100%;
+              border-radius: 16px;
+            }
+          }
+          .prof-data{
+            padding-left: 30px;
+            h6{
+              font-size: 2.4rem;
+              margin-bottom: 15px;
+              span{
+                display: inline-block;
+              }
+            }
+            p{
+              font-size: 1.4rem;
+              line-height: 2.3;
+            }
+          }
+          .sns_share{
+            margin: 5px 0 0 20px;
+            .sns_list{
+              justify-content: flex-start;
+              li{
+                margin: 0 22px 22px 0;
+                img{
+                  width: auto;
+                  height: 33px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  お問い合わせ
+---------------------------------------------------------------- */
+.page-contact{
+
+}
+
+
+/* ----------------------------------------------------------------
+  お知らせ（アーカイブ、個別）
+---------------------------------------------------------------- */
+.single,
+.archive,
+.category,
+.page-news{
+}
+
+/* ----------------------------------------------------------------
+  フォーム
+---------------------------------------------------------------- */
+.sec-form{
+  padding: 0 30px;
+  .intro-form{
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: $break){
+  .sec-form{
+    width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    .intro-form{
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  プライバシーポリシー
+---------------------------------------------------------------- */
+.sec-pp{
+  text-align: left;
+  line-height: 1.8em;
+  .sec_title{
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    border-width: 3px;
+  }
+  ul{
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: $break){
+  .sec-pp{
+    max-width: 900px;
+    text-align: left;
+    .sec_title{
+      font-size: 2.2rem;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  タームリスト
+---------------------------------------------------------------- */
+.term_arichive_wrap{}
+.term_arichive{
+  margin-bottom: 25px;
+  //ターム名と一覧リンク
+  .term_title_wrap{
+    .term_title{
+      .icon{
+        width: auto;
+        height: 20px;
+        margin-right: 8px;
+        vertical-align: top;
+      }
+      font-size: 1.6rem;
+      font-weight: 600;
+      position: relative;
+      padding: 15px 15px  10px;
+      border: 1px solid $c-gray_light;
+      // &---investment{ background-color: #f76a6a; }
+      // &---company{ background-color: #68a7f7; }
+      // &---tax_system{ background-color: #38c254; }
+      // &---column{ background-color: #e6d25d; }
+    }
+    .term_archive_link{
+      position: absolute;
+      right: 15px;
+      top: auto;
+      font-size: 1.2rem;
+      font-weight: normal;
+      &::after{
+        content: "\f105";
+        font-family: $ff-icon;
+        font-weight: 900;
+        margin-left: 8px;
+      }
+      &:link,&:visited{
+        color: $c-gray_light;
+      }
+    }
+  }
+  //ターム記事のリスト
+  .term_list{
+    .term_list_item{
+      padding: 8px 10px 7px 1.2em;
+      margin-left: 2px;
+      text-indent: -0.75em;
+      border-bottom: 1px dashed $c-gray_light;
+      &::before{
+        content: "\f0da";
+        font-family: $ff-icon;
+        color: $c-link;
+        font-weight: 900;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .term_arichive_wrap{
+    width: 872px;
+    margin: 0 auto;
+  }
+  .term_arichive{
+    margin-bottom: 40px;
+    //ターム名と一覧リンク
+    .term_title_wrap{
+      .term_title{
+        .icon{
+          height: 50px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+        font-size: 3.5rem;
+        font-weight: 600;
+        line-height: 1em;
+        padding: 35px 40px 30px;
+        border-width: 4px;
+        border-radius: 10px;
+      }
+      .term_archive_link{
+        right: 30px;
+        font-size: 1.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        &:link,&:visited{
+          color: $c-black;
+        }
+        &:hover,&:active{
+        }
+      }
+    }
+    //ターム記事のリスト
+    .term_list{
+      margin: 10px 20px 0;
+      .term_list_item{
+        padding: 15px 10px 14px 1em;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------------------------------
+  検索結果
+---------------------------------------------------------------- */
+.search_result_wrap{
+  .search_title{
+    background-color: $c-gray_light;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  .search_list{
+    margin-bottom: 30px;
+    .search_list_li{
+      padding: 3px 5px;
+      &::before{
+        content: "\f0da";
+        font-family: $ff-icon;
+        color: $c-link;
+        font-weight: 900;
+        margin-right: 5px;
+      }
+      .entry_date{}
+    }
+  }
+}
+@media (min-width: $break){
+  .search_result_wrap{
+    .search_title{
+      display: inline-block;
+      line-height: 34px;
+      padding: 0 25px;
+      border-radius: 17px;
+      margin-bottom: 25px;
+    }
+    .search_list{
+      margin-bottom: 20px;
+      .search_list_li{
+        padding: 3px 5px;
+        .entry_date{}
+      }
+    }
+  }
+}

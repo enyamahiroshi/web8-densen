@@ -1,0 +1,162 @@
+/* ------------------------------------
+//  リスト
+// ----------------------------------*/
+
+/* 基本 */
+ol, ul{
+  margin: 0 0 1.5em;
+  font-size: inherit;
+  li{
+    margin-bottom: 0.8em;
+    text-align: left;
+    line-height: 1.5em;
+  }
+}
+
+/* 各リスト */
+.list{
+  list-style: none inside;
+  margin-left: 1.5em;
+  li{
+    position: relative;
+    &::before{
+      font-size: 95%;
+      vertical-align: 1px;
+      color: $c-main;
+      position: absolute;
+      top: 0;
+    }
+  }
+  //ベース
+  &---base{
+    li::before{
+      content: "●";
+      font-size: 1rem;
+      left: -2.1em;
+    }
+  }
+  //スラッシュ
+  &---slash{
+    margin: 1.5em 0;
+    padding: 20px 30px 5px 25px;
+    text-align: left;
+    border: 1px solid $c-gray_light;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      &::before{
+        content: none;
+      }
+      &::after{
+        display: inline-block;
+        vertical-align: top;
+        content: "/";
+        margin: 0 3px 0 8px;
+        opacity: 0.2;
+      }
+      &:last-child::after{
+        content: none;
+      }
+    }
+  }
+  //インパクト
+  &---inpact{
+    margin: 1.5em 0;
+    padding: 20px 15px 5px 18px;
+    background-color: $c-base_light;
+    border-radius: 10px;
+    li{
+      font-size: 1.8rem;
+      padding-left: 1.5em;
+      &::before{
+        content: "\f14a";
+        font-family: $ff-icon;
+        font-weight: bold;
+        left: 0;
+      }
+    }
+  }
+  //四角
+  &---square{
+    li::before{
+      content: "■";
+      font-size: 90%;
+    }
+  }
+  //チェックマーク
+  &---check{
+    li{
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.5em;
+      color: $c-gray_light;
+      padding-left: 28px;
+      margin-left: 5px;
+      margin-bottom: 8px;
+      background: url(img/common/cap_check.png) no-repeat left 2px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  // 1. 2. 3.でカウント
+  &---count{
+    margin-left: 2.5em;
+    li{
+      counter-increment: NormalCnt;
+      &::before{
+        left: -2em;
+        content: counter(NormalCnt) '.';
+      }
+    }
+  }
+  // [1][2][3]でカウント
+  &---count_kakko{
+    margin-left: 2.5em;
+    li{
+      counter-increment: CntKakko;
+      &::before{
+        left: -2.5em;
+        content: '[' counter(CntKakko) ']';
+      }
+    }
+  }
+  // a b c でカウント
+  &---count_alphabe{ // a b c
+    margin-left: 2em;
+    li{
+      counter-increment: CntAlpha;
+      &::before{
+        left: -1.6em;
+        font-size: 110%;
+        content:  counter(CntAlpha, lower-alpha);
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .list{
+    //スラッシュ
+    &---slash{
+      margin: 2em 0;
+      padding: 25px 35px 10px 35px;
+      li{
+        &::after{
+          margin: 0 5px 0 12px;
+        }
+        &:last-child::after{
+          content: none;
+        }
+      }
+    }
+    //インパクト
+    &---inpact{
+      margin: 2em 0;
+      padding: 40px 40px 10px 45px;
+      li{
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

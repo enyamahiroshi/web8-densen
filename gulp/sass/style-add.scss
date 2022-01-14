@@ -1,0 +1,53 @@
+/*
+2018.10 太陽光発電O&Mページ 改修時追加
+*/
+//MV
+.p-o_and_m .mv_second{
+	background: url(./img/mv/mv_bg_eco.jpg) no-repeat center top;
+}
+
+.content_area{
+	padding-bottom: 40px;
+	//イントロの青い大文字
+	.intro_large{
+		font-size: 22px;
+		line-height: 1.6;
+		font-weight: bold;
+		color: #005ba8;
+		margin: 30px 0;
+	}
+	//下部の営業カレンダーへの誘導タイトル
+	.large_title{
+		font-size: 22px;
+		line-height: 1.6;
+		font-weight: bold;
+		color: #005ba8;
+		text-align: center;
+		margin: 50px 0 30px;
+	}
+}
+
+//テーブル（オレンジ）
+.tble_orange{
+	width: 100%;
+	margin: 1.5em auto;
+	color: #111;
+	th,
+	td{
+		padding: 10px;
+		background-color: rgb(255, 237, 219);
+		border: 2px solid #fff;
+	}
+	thead{
+		th{
+			text-align: center;
+			padding: 6px 10px;
+			background-color: rgb(255, 150, 21);
+		}
+	}
+	tbody{
+		th{
+			width: 25%;
+		}
+	}
+}

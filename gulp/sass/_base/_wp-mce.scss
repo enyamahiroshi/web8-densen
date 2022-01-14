@@ -1,0 +1,208 @@
+/* ------------------------------------
+//  the_content(); で吐き出される投稿箇所
+// ----------------------------------*/
+/* 見出し */
+.mce h1,
+.mce h2,
+.mce h3,
+.mce h4,
+.mce h5,
+.mce h6{
+  margin-bottom: 1em;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+.mce h1{
+  font-size: 3rem;
+}
+.mce h2{
+  font-size: 2rem;
+}
+.mce h3{
+  font-size: 1.8rem;
+}
+.mce h4{
+  font-size: 1.6rem;
+}
+.mce h5{
+  font-size: 1.6rem;
+}
+.mce h6{
+  font-size: 1.6rem;
+}
+
+/* 段落 */
+.mce p,
+.mce div{
+  font-size: inherit;
+  margin: 0 0 1em;
+}
+.mce p:last-child,
+.mce div:last-child{
+  margin-bottom: 0;
+}
+
+/* リンク */
+.mce a{
+  &:link,
+  &:visited{
+    color: $c-link;
+    text-decoration: underline;
+  }
+  &:hover,
+  &:active{
+    color: $c-hover;
+    text-decoration: underline;
+  }
+}
+
+/* 画像 */
+.mce img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 1em 0;
+  vertical-align: top;
+}
+
+/* 回り込み */
+.mce .alignnone{
+  display: block;
+  float: none;
+}
+.mce .alignleft{
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.mce .aligncenter{
+  display: block;
+  float: none;
+  margin: 1em auto;
+  text-align: center;
+}
+.mce .alignright{
+  float: right;
+  margin: 0 0 1em 1em;
+}
+/* 回り込み解除(clearfix) */
+.mce .alignleft:before,
+.mce .alignleft:after,
+.mce .alignrightalignright:before,
+.mce .alignright:after{
+  display: table;
+  content: ' ';
+}
+.mce .alignleft:after,
+.mce .alignrightalignright:after{
+  clear: both;
+}
+.mce .alignleft,
+.mce .alignright{
+  *zoom: 1;
+}
+
+/* リスト */
+.mce ul,
+.mce ol{
+  margin: 0 0 1em;
+  padding: 0;
+  padding-left: 1.5em;
+}
+.mce ul{
+  list-style: disc outside;
+}
+.mce ol{
+  list-style: decimal outside;
+}
+.mce ul,
+.mce ol,
+.mce ul li,
+.mce ol li{
+  margin-bottom: 0.5em;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.mce dl{
+  margin: 1em 0;
+}
+.mce dl dt{
+  margin-bottom: .5em;
+}
+.mce dl dd{
+  margin-bottom: .5em;
+}
+.mce dl,
+.mce dl dt,
+.mce dl dd{
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+/* リストのネスト */
+.mce ul ul,
+.mce ul ol,
+.mce ul dl,
+.mce ol ol,
+.mce ol ul,
+.mce ol dl,
+.mce dl dl,
+.mce dl ul,
+.mce dl ol{
+  margin: 1em;
+}
+
+/* テーブル */
+.mce table{
+  margin: 1em 0;
+  width: auto;
+  max-width: 100%;
+}
+.mce th,
+.mce td{
+  padding: 0.7em 0.8em;
+  border: 1px solid #b3b3b3;
+  background: #f6f6f6;
+  line-height: 1.5em;
+}
+.mce td{
+  background: #fdfdfd;
+}
+
+/* iframe */
+.mce iframe{
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+/* その他装飾 */
+.mce strong{
+  font-weight: 600;
+  color: $c-black;
+}
+.mce em{
+  font-weight: normal;
+  font-style: italic;
+  color: $c-black;
+}
+.mce pre{
+  margin: 1em 0;
+  padding: 1em 1.5em;
+  background: #ededed;
+  white-space: pre-wrap;
+}
+.mce hr{
+  border: 1px solid #ccc;
+}
+.mce blockquote{
+  padding: 1em 1.5em;
+  color: #555;
+  font-style: italic;
+}
+.mce blockquote cite:before{
+  margin: 0 1em;
+  color: #999;
+  content: '─';
+}

@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+// スライダーの構造を定義
+.slider_wrap {
+  width: 100vw;
+  height: 100%;
+  background-color: $c-base;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  // 各スライド
+  .item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    // 画像（背景に）
+    .item_img{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: scale(1.18);
+      filter: saturate(15%);
+    }
+    // キャッチコピー
+    .copy{
+      width: 75%;
+      font-size: 1.6rem;
+      font-weight: 200;
+      text-align: center;
+      line-height: 2em;
+      letter-spacing: 0.15em;
+      color: #fff;
+      text-shadow: 0 0 9px rgba(0,0,0,0.9);
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+    }
+    // スライド動作中のスタイル
+    &.in {
+      z-index: 2;
+      // キャッチコピー
+      .copy{
+        transition: opacity 1.6s ease-in-out;
+        opacity: 1;
+      }
+      // 画像
+      .item_img{
+        transition: transform 6.6s ease-out, filter 5s ease-out 1.6s;
+        opacity: 1;
+        transform: scale(1);
+        filter: saturate(65%);
+      }
+    }
+    &.out {
+      z-index: 1;
+      // 画像
+      .item_img{
+        opacity: 0;
+        transform: scale(1.07);
+      }
+    }
+    //写真ごとに変更
+    &---1{
+      .item_img{
+        background-image: url(./img/home/mv01-sp.jpg);
+      }
+    }
+    &---2{
+      .item_img{
+        background-image: url(./img/home/mv02-sp.jpg);
+      }
+    }
+    &---3{
+      .item_img{
+        filter: brightness(85%) saturate(15%);
+        background-image: url(./img/home/mv03-sp.jpg);
+      }
+    }
+    &---4{
+      .item_img{
+        filter: brightness(85%) saturate(15%);
+        background-image: url(./img/home/mv04-sp.jpg);
+      }
+    }
+    &---3,
+    &---4{
+      .item_img{
+        filter: brightness(85%) saturate(15%);
+      }
+      &.in {
+        // 画像
+        .item_img{
+          filter: brightness(95%) saturate(65%);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .slider_wrap {
+      // 各スライド
+    .item {
+      // キャッチコピー
+      .copy{
+        width: 40%;
+        padding: 0;
+        text-align: right;
+        font-size: 2.2rem;
+        letter-spacing: 0.13em;
+        line-height: 2em;
+        text-shadow: 0 0 9px rgba(0,0,0,0.8);
+        left: auto;
+        top: auto;
+        right: 70px;
+        bottom: 50px;
+        transform: translate(0);
+      }
+      //写真ごとに変更
+      &---1{
+        .item_img{
+          background-image: url(./img/home/mv01.jpg);
+        }
+      }
+      &---2{
+        .item_img{
+          background-image: url(./img/home/mv02.jpg);
+        }
+      }
+      &---3{
+        .item_img{
+          background-image: url(./img/home/mv03.jpg);
+        }
+      }
+      &---4{
+        .item_img{
+          background-image: url(./img/home/mv04.jpg);
+        }
+      }
+    }
+  }
+}

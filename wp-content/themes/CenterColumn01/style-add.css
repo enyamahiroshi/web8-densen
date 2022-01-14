@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+/*
+2018.10 太陽光発電O&Mページ 改修時追加
+*/
+.p-o_and_m .mv_second{
+  background: url(img/mv/mv_bg_eco.jpg) no-repeat center top;
+}
+
+.content_area{
+  padding-bottom: 40px;
+}
+.content_area .intro_large{
+  margin: 30px 0; 
+  color: #005ba8;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.6;
+}
+.content_area .large_title{
+  margin: 50px 0 30px; 
+  color: #005ba8;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.tble_orange{
+  margin: 1.5em auto;
+  width: 100%;
+  color: #111;
+}
+.tble_orange th,
+.tble_orange td{
+  padding: 10px;
+  border: 2px solid #fff; 
+  background-color: #ffeddb;
+}
+.tble_orange thead th{
+  padding: 6px 10px;
+  background-color: #ff9615; 
+  text-align: center;
+}
+.tble_orange tbody th{
+  width: 25%;
+}

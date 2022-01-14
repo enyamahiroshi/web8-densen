@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+/* ----------------------------------------------------------------
+  slick.css, slick-theme.css を上書き
+---------------------------------------------------------------- */
+.slick-slide
+{
+  padding-left: 6px;
+  padding-right: 6px;
+  &:focus{
+    outline: none !important;
+  }
+}
+@media (min-width: $break){
+  .slick-slide
+  {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+//Dots
+.slick-dots{
+  position: relative !important;
+  bottom: 0 !important;
+  margin: 10px 0 -25px !important;
+  li{
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 9px !important;
+    padding: 0;
+    button{
+      width: 12px !important;
+      height: 12px !important;
+      padding: 0 !important;
+      background-color: #ccc !important;
+      border-radius: 50% !important;
+      &::before{
+        content: "" !important;
+      }
+    }
+    //active
+    &.slick-active{
+      button{
+      background-color: #ee8222 !important;
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .slick-dots{
+    margin: 10px 0 -20px !important;
+  }
+}

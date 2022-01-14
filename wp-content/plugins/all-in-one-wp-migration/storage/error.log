@@ -1,0 +1,48 @@
+Oct 01 2018 12:29:05
+{"Number":1024,"Message":"get_plugin_data \u304c\u30d0\u30fc\u30b8\u30e7\u30f3 3.0.0 \u304b\u3089<strong>\u975e\u63a8\u5968<\/strong>\u306b\u306a\u3063\u305f\u5f15\u6570\u4ed8\u304d\u3067\u547c\u3073\u51fa\u3055\u308c\u307e\u3057\u305f\u3002The <code>Site Wide Only: true<\/code> plugin header is deprecated. Use <code>Network: true<\/code> instead.","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-includes\/functions.php","Line":4045}
+
+Oct 01 2018 12:29:05
+{"Number":2,"Message":"mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":82}
+
+Oct 01 2018 12:29:05
+{"Number":2,"Message":"mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":112}
+
+Oct 01 2018 12:29:06
+{"Number":1024,"Message":"get_plugin_data \u304c\u30d0\u30fc\u30b8\u30e7\u30f3 3.0.0 \u304b\u3089<strong>\u975e\u63a8\u5968<\/strong>\u306b\u306a\u3063\u305f\u5f15\u6570\u4ed8\u304d\u3067\u547c\u3073\u51fa\u3055\u308c\u307e\u3057\u305f\u3002The <code>Site Wide Only: true<\/code> plugin header is deprecated. Use <code>Network: true<\/code> instead.","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-includes\/functions.php","Line":4045}
+
+Oct 01 2018 12:29:06
+{"type":1024,"message":"convert_to_screen(), add_meta_box() \u304c<strong>\u8aa4\u3063\u3066<\/strong>\u547c\u3073\u51fa\u3055\u308c\u307e\u3057\u305f\u3002Likely direct inclusion of <code>wp-admin\/includes\/template.php<\/code> in order to use <code>add_meta_box()<\/code>. This is very wrong. Hook the <code>add_meta_box()<\/code> call into the <code>add_meta_boxes<\/code> action instead. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (\u3053\u306e\u30e1\u30c3\u30bb\u30fc\u30b8\u306f\u30d0\u30fc\u30b8\u30e7\u30f3 3.3.0 \u3067\u8ffd\u52a0\u3055\u308c\u307e\u3057\u305f)","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-includes\/functions.php","line":4161}
+
+Oct 01 2018 12:34:04
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:34:04
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:34:05
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:34:05
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:34:06
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:34:21
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:38:02
+{"Number":2,"Message":"mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":82}
+
+Oct 01 2018 12:38:02
+{"Number":2,"Message":"mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":112}
+
+Oct 01 2018 12:38:03
+{"type":8192,"message":"Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor","file":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/wordpress-importer\/wordpress-importer.php","line":38}
+
+Oct 01 2018 12:55:16
+{"Number":2,"Message":"mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":82}
+
+Oct 01 2018 12:55:16
+{"Number":2,"Message":"mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given","File":"\/Users\/ichigo\/EN-DESIGN(Mac)\/Projects\/densen.co.jp\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-mysqli.php","Line":112}
+

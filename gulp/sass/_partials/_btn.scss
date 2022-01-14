@@ -1,0 +1,86 @@
+/* ------------------------------------
+//  ボタン
+// ----------------------------------*/
+/* wrapper */
+.btn_wrap{
+  text-align: center;
+}
+@media (min-width: $break){
+  .btn_wrap{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 各ボタン */
+.btn{
+  display: inline-block;
+  width: auto;
+  min-width: 200px;
+  padding: 12px 30px 14px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1em;
+  position: relative;
+  transition: all 0.3s;
+  &:link, &:visited{
+    color: $c-black;
+    text-decoration: none;
+  }
+  &:hover, &:active{
+    opacity: 1;
+  }
+  // 共通：右矢印
+  svg.arrow{
+    width: 8px;
+    fill: #fff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  // ベース
+  &---base{
+    &:link,&:visited{
+      color: #fff;
+      background-color: $c-base;
+    }
+    &:hover, &:active{
+      color: $c-black;
+      background-color: #ddd;
+      svg.arrow{
+        fill: #222;
+      }
+    }
+  }
+  // 白
+  &---white{
+    svg.arrow{
+      fill: $c-black;
+    }
+    &:link,&:visited{
+      color: $c-black;
+      background-color: #fff;
+    }
+    &:hover, &:active{
+      color: #fff;
+      background-color: $c-base;
+      svg.arrow{
+        fill: #fff;
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .btn{
+    min-width: auto;
+    max-width: auto;
+    padding: 16px 58px 18px;
+    margin: 20px auto;
+    // 共通
+    &::after{
+      right: 20px;
+    }
+  }
+}

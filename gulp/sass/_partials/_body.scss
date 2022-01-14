@@ -1,0 +1,504 @@
+/* ------------------------------------
+//  ページタイトル周り
+// ----------------------------------*/
+.page_head{
+  text-align: center;
+  background-image: url(./img/home/img-concept.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  //ページタイトル
+  .page_title{
+    padding: 90px 20px 80px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    span{
+      display: block;
+      margin-top: -6px;
+      font-size: 1.2rem;
+      font-weight: 200;
+    }
+  }
+}
+@media (min-width: $break){
+  .page_head{
+    //ページタイトル
+    .page_title{
+      padding: 180px 40px 170px;
+      font-size: 3.2rem;
+      line-height: 1.2em;
+      span{
+        margin-top: 2px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+/* ------------------------------------
+//  ボディー部のブロック
+// ----------------------------------*/
+/* 全体 */
+.main_content{
+  text-align: center;
+  position: relative;
+}
+@media (min-width: $break){
+  .main_content{
+  }
+}
+
+/* セクション */
+//ベース設定：各ページの設定は _pages.scss へ
+.sec{
+  padding: 65px 20px 20px;
+  position: relative;
+  background-color: $c-base;
+  color: $c-gray_light;
+  overflow: hidden;
+}
+@media (min-width: $break){
+  .sec{
+    padding: 120px 15% 0 15%;
+  }
+}
+
+/* ------------------------------------
+//  見出し
+// ----------------------------------*/
+/* 見出し */
+.sub_title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6em;
+  margin-bottom: 15px;
+}
+@media (min-width: $break){
+  .sub_title{
+    font-size: 2.1rem;
+    line-height: 1.5em;
+    margin-bottom: 45px;
+  }
+}
+
+/* ------------------------------------
+//  リンクタイプ
+// ----------------------------------*/
+/* キャプション付きのテキストリンク */
+.link_cap{
+  margin: 0 0.5em;
+  &::before{
+    content: "\f0da";
+    font-family: $ff-icon;
+    color: $c-link;
+    font-weight: 900;
+    margin-right: 3px;
+  }
+  @include linkColor($c-link);
+}
+
+/* 別ウィンドウで表示（アイコン付） */
+.link_blank{
+  &::before{
+    content: "\f35d";
+    font-family: $ff-icon;
+    font-size: 90%;
+    font-weight: 900;
+    margin-right: 5px;
+  }
+}
+
+/* ------------------------------------
+//  テキストスタイル
+// ----------------------------------*/
+/* 重要な文章、注意 */
+.important{
+  color: $c-key;
+}
+/* 太く大きい文字 */
+.emphasis{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media (min-width: $break){
+  .emphasis{
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+}
+/* 注釈 */
+.note_type1{
+  color: $c-gray;
+  font-size: 1.2rem;
+  line-height: 1.6em;
+  margin-bottom: 0;
+}
+.emphasis-1{
+  font-weight: normal;
+  color: #ffff83;
+}
+
+/* ------------------------------------
+//  段落スタイル
+// ----------------------------------*/
+/* リード文章 */
+.leading_txt{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+@media (min-width: $break){
+  .leading_txt{
+    font-size: 1.8rem;
+    line-height: 1.8em;
+    margin-bottom: 1.5em;
+  }
+}
+
+/* ------------------------------------
+//  テーブルスタイル
+// ----------------------------------*/
+.tbl_typeA{
+  width: 100%;
+  margin: 0 auto 30px;
+  border-top: 2px solid #6f5240;
+  th,td{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.4rem;
+    line-height: 1.6em;
+    // border-bottom: 1px dotted #6f5240;
+  }
+  th{
+    padding-bottom: 7px;
+    font-weight: 600;
+    color: #fbb03b;
+    background: url(./img/common/bg-dot.png) repeat-x left bottom;
+  }
+  td{
+    border-bottom: 2px solid #6f5240;
+    padding-bottom: 10px;
+  }
+  thead{
+    th,td{
+    }
+  }
+  tfoot{
+    th,td{
+    }
+  }
+}
+@media (min-width: $break){
+  .tbl_typeA{
+    margin: 0 auto 40px;
+    border-top: none;
+    background: url(./img/common/bg-dot.png) repeat-x left top;
+    th,td{
+      display: table-cell;
+      vertical-align: top;
+      padding: 30px 8px 32px;
+      font-size: 1.6rem;
+      line-height: 1.6em;
+      border: none;
+    }
+    th{
+      width: 200px;
+      font-weight: 600;
+      color: #fbb03b;
+    }
+    td{
+      width: auto;
+      background: url(./img/common/bg-dot.png) repeat-x left bottom;
+    }
+    thead{
+      th,td{
+      }
+    }
+    tfoot{
+      th,td{
+      }
+    }
+  }
+}
+
+//スマホで横スクロールさせる
+.scroll_tbl_wrap{
+  width: 100%;
+  overflow: auto; /*tableをスクロールさせる*/
+  white-space: nowrap; /*tableのセル内にある文字の折り返しを禁止*/
+}
+.scroll_tbl_wrap::-webkit-scrollbar {
+  height: 8px; /* スクロールバーの高さ */
+}
+.scroll_tbl_wrap::-webkit-scrollbar-thumb {
+  background: #aaa; /* スクロールバーの色 */
+}
+.scroll_tbl_wrap::-webkit-scrollbar-track {
+  background: #ccc; /* スクロールバーの背景色 */
+}
+@media (min-width: $break){
+  .scroll_tbl_wrap{
+    width: auto;
+    overflow: hidden; /*tableをスクロールさせる*/
+    white-space: nowrap; /*tableのセル内にある文字の折り返しを禁止*/
+  }
+  .scroll_tbl_wrap::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll_tbl_wrap::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  .scroll_tbl_wrap::-webkit-scrollbar-track {
+    display: none;
+  }
+}
+
+/* ------------------------------------
+//  TELリンク
+// ----------------------------------*/
+.tel_link{
+  display: inline-block;
+  font-size: 1.8rem;
+  background-color: transparent;
+  &:link, &:visited{
+    text-decoration: none;
+  }
+}
+@media (min-width: $break){
+  .tel_link{
+    display: inline;
+    font-size: inherit;
+    &:link, &:visited{
+      text-decoration: underline;
+    }
+    &:hover, &:active{
+      opacity: 1;
+    }
+    img{
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+/* ------------------------------------
+//  telリンク - PCで無効化、SPで有効化
+//  headerに<meta name="format-detection" content="telephone=no">追加する
+//  js に“telリンクを有効にする”
+// ----------------------------------*/
+a[href^='tel:']{
+  cursor: default;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active{
+    color: inherit;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------
+//  bread nav（パンくずナビ）
+// ----------------------------------*/
+.breadcrumbs_wrap{
+  padding: 0 15px;
+  background-color: #f2f2f2;
+  .breadcrumbs{
+    padding: 9px 0;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1em;
+    color: #666;
+    span{
+      margin: 0 3px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+    a{
+      margin-right: 3px;
+      &:link,&:visited{
+        color: #666;
+      }
+      &:hover,&:active{
+      }
+    }
+    .breadcrumb_last{ //現在のページ
+    }
+  }
+}
+@media (min-width: $break){
+  .breadcrumbs_wrap{
+    padding: 0 20px;
+    .breadcrumbs{
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* ------------------------------------
+//  ローディング
+// ----------------------------------*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: $c-black;
+  z-index: 1;
+}
+
+// ▼ ローダーの変数定義 ▼
+$color: #777;
+$size: 45px;
+$speed: 1500ms;
+@media (min-width: $break){
+  $size: 75px;
+}
+// ▲ ローダーの変数定義 ▲
+#loader {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: $size;
+  height: $size;
+  margin: auto;
+  z-index: 2;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-width: $size/8;
+    border-style: solid;
+    border-color: $color;
+    border-radius: 100%;
+  }
+  &:before { opacity: 0.5; }
+  &:after {
+    border-color: $color transparent transparent;
+    animation: spin $speed linear infinite;
+  }
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* ------------------------------------
+//  ページ送り（前の記事、次の記事）
+// ----------------------------------*/
+//前の記事、次の記事
+.send_page_wrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  .btn{
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    &::after{
+      content: none;
+    }
+    .i-left,.i-right{
+      &::before{
+        display: inline-block;
+        margin-bottom: 2px;
+        content: "";
+        width: 11px;
+        height: 8px;
+        background: url(./img/common/icon_btn-arrow-right-blk.png) no-repeat center;
+        background-size: cover;
+      }
+    }
+    .i-left::before{
+      margin-right: 13px;
+      background: url(./img/common/icon_btn-arrow-left-blk.png) no-repeat center;
+      background-size: cover;
+    }
+    .i-right::before{
+      margin-left: 13px;
+    }
+  }
+}
+@media (min-width: $break){
+  //前の記事、次の記事
+  .send_page_wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    .btn{
+      .i-left,.i-right{
+        &::before{
+          margin-bottom: 2px;
+          width: 14px;
+          height: 10px;
+        }
+      }
+      .i-left::before{
+        margin-right: 8px;
+      }
+      .i-right::before{
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+/* ------------------------------------
+//  スクロールで固定
+// ----------------------------------*/
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+/* ------------------------------------
+//  ページTOPへ戻るボタン
+// ----------------------------------*/
+.btn_page_top{
+  // display: none;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 9999;
+  &:hover,&:active{
+    opacity: 0.7;
+  }
+  img{
+    width: 100%;
+  }
+}
+@media (min-width: $break){
+  .btn_page_top{
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    bottom: 50px;
+  }
+}

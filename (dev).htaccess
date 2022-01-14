@@ -1,0 +1,24 @@
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /development/densen_test/
+    RewriteRule ^wp-signup\.php 404-siteguard [L]
+    RewriteRule ^wp-activate\.php 404-siteguard [L]
+    RewriteRule ^ds_login(.*)$ wp-login.php$1 [L]
+</IfModule>
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /development/densen_test/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /development/densen_test/index.php [L]
+</IfModule>
+
+# END WordPress

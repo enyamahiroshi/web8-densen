@@ -1,0 +1,276 @@
+/* ----------------------------------------------------------------
+  ヘッダーのレイアウト
+---------------------------------------------------------------- */
+//ロゴ SVG
+.logoset{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo-path{
+    margin: 0 0.8%;
+    fill:$c-base;
+  }
+  .logo-e{
+    width: 8.9%;
+  }
+  .logo-n{
+    width: 15.8%;
+  }
+  .logo-dot{
+    width: 5%;
+    margin-bottom: 1px;
+    fill: $c-main;
+    align-self: flex-end;
+  }
+  .logo-d{
+    width: 13.6%;
+  }
+  .logo-s{
+    width: 11.5%;
+  }
+  .logo-i{
+    width: 4%;
+  }
+  .logo-g{
+    width: 16.5%;
+  }
+}
+
+//ヘッダーwrapper
+header{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: -100%;
+  z-index: 9990;
+  .header_wrap{
+    width: 100%;
+    z-index: 9991;
+  }
+  //MV以上のスクロールで変化：jsで付与
+  &.header-fixed{
+    top: 0;
+    background-color: $c-gray_light;
+    transition: all 0.8s ease;
+  }
+}
+@media (min-width: $break){
+  header{
+    height: 54px;
+    .header_wrap{
+    }
+    //MV以上のスクロールで変化：jsで付与
+    &.header-fixed{
+      //開閉ボタン
+      .btn_menu{
+        width: 60px;
+        height: 60px;
+        padding-bottom: 1px;
+        right: 10px;
+        top: 0;
+      }
+    }
+  }
+}
+
+//header内のロゴ
+.head_logo{
+  h1{
+    line-height: 1;
+    a{
+      display: block;
+      padding: 10px 15px;
+    }
+  }
+}
+@media (min-width: $break){
+  //header内のロゴ
+  .head_logo{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    h1{
+      a{
+        display: inline-block;
+        padding: 0;
+        .logoset{
+          vertical-align: top;
+          width: 240px;
+        }
+      }
+    }
+  }
+}
+
+//グローバルメニュー
+.gmenu_wrap{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  top: 0;
+  //読み込むカスタムメニュー
+  .menu{
+    padding: 70px 15px 0;
+    li{
+      text-align: left;
+      line-height: 1.6em;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      a{
+        display: block;
+        padding: 12px 5px;
+        font-size: 1.5rem;
+        position: relative;
+        span{
+          margin-left: 0.8em;
+          font-size: 1.3rem;
+          font-weight: 200;
+          letter-spacing: 0.07em;
+          opacity: 0.5;
+        }
+        &::after{
+          display: block;
+          // content: "";
+          width: 7px;
+          height: 10px;
+          background: url(./img/common/arrow-r-wht.png) no-repeat center;
+          background-size: cover;
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          margin-top: -4px;
+        }
+        &:link, &:visited{
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover, &:active{
+          opacity: 0.7;
+        }
+      }
+      //現在のページ
+      &.current-menu-item{
+        a{
+          &:link, &:visited{
+            color: $c-key;
+            span{
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+  // メニューオープン時
+  &---active{
+    display: block;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.97);
+  }
+}
+@media (min-width: $break){
+  .gmenu_wrap{
+    //読み込むカスタムメニュー
+    .menu{
+      padding: 110px 20% 0;
+      li{
+        a{
+          display: inline-block;
+          font-size: 1.6rem;
+          padding: 18px 5px;
+          span{
+            margin-left: 1em;
+            font-size: 1.3rem;
+            font-weight: 200;
+            letter-spacing: 0.1em;
+            opacity: 0.5;
+          }
+        }
+        &:hover, &:active{
+          opacity: 1;
+        }
+      }
+    }
+    // メニューオープン時
+    &---active{
+    }
+  }
+}
+
+//開閉ボタン
+.btn_menu{
+  display: block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  right: 4px;
+  top: 0;
+  z-index: 9999;
+  span{
+    display: block;
+    width: 24px;
+    height: 1px;
+    margin: 4px 0;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+  // メニューを開いたら閉じるボタンに変更
+  &---active{
+    span{
+      display: none;
+      width: 26px;
+      position: relative;
+      margin: 0;
+      background-color: #fff;
+      &.ml1{
+        display: block;
+        transform: rotate(-45deg);
+      }
+      &.ml3{
+        display: block;
+        transform: rotate(45deg);
+        bottom: 1px;
+      }
+    }
+  }
+}
+@media (min-width: $break){
+  .btn_menu{
+    width: 70px;
+    height: 70px;
+    padding-bottom: 4px;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.7;
+    }
+    span{
+      width: 35px;
+      height:  3px;
+      margin: 4px 0;
+    }
+    // メニューを開いたら閉じるボタンに変更
+    &---active{
+      span{
+        width: 35px;
+        position: relative;
+        margin: 0;
+        background-color: #fff;
+        &.ml1{
+        }
+        &.ml3{
+          bottom: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* -----------------------------------------
+// 共通
+// ---------------------------------------*/
+
+// ie11のinputに出る×印を消す
+input[type=text]::-ms-clear {
+  display: none;
+}
+input[type=password]::-ms-reveal {
+  display: none;
+}
+// iOSでinputが角丸になるのを防止
+input[type="button"], input[type="text"], input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+//chromeのオートコンプリートを消す
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px $c-gray_light inset;
+}
+
+
+form{
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  p{
+    margin: 0;
+  }
+}
+label{
+  display: block;
+  font-size: inherit;
+  font-weight: 600;
+  margin: 0;
+}
+input,
+select,
+textarea{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: inherit;
+  padding: 4px 5px;
+  margin-bottom: 10px;
+  background-color: $c-gray;
+  border: 1px solid $c-gray;
+  position: relative;
+  &:focus{
+    outline: none;
+    background-color: $c-gray_light !important;
+    border-color: $c-gray_light !important;
+  }
+}
+textarea{
+  height: 100%;
+}
+//セレクトボックス初期化・カスタマイズ
+select{
+  appearance: none;
+  position: relative;
+  &-ms-expand {
+    display: none;
+  }
+}
+
+@media (min-width: $break){
+  form{
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+  }
+  label{
+    margin: 0;
+  }
+}

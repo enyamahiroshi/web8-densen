@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+/* !HTML5 elements
+---------------------------------------------------------- */
+header, footer, nav, section, aside, article
+{ display: block;}
+
+/* !Reseting
+---------------------------------------------------------- */
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',"メイリオ",Meiryo,'ＭＳ Ｐゴシック',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	-webkit-text-size-adjust: none;
+	line-height: 1.5;
+	color: #333;
+}
+
+input, textarea
+{ margin: 0; font-size: 100%;}
+label
+{ cursor: pointer;}
+table
+{ border-collapse: collapse; border-spacing: 0; font-size: 100%;}
+fieldset, img
+{ border: 0;}
+img
+{ vertical-align: top; max-width: 100%;}
+address, caption, cite, code, dfn, em, th, var
+{ font-style: normal; font-weight: normal;}
+ol, ul
+{ list-style: none;}
+caption, th
+{ text-align: left;}
+h1, h2, h3, h4, h5, h6
+{ font-size: 100%; font-weight: normal;}
+q:after, q:before
+{ content:'';}
+a, input
+{ /* outline: none; */ }
+abbr, acronym
+{ border: 0;}
+
+
+
+
+/* !Layout
+---------------------------------------------------------- */
+html { overflow-y: scroll;}
+body { }
+@media print {
+	html,
+	html body { *zoom: 0.65;}
+}
+
+/* !wrapper
+---------------------------------------------------------- */
+#wrapper {
+	background:#fff;
+}
+
+#contents {
+	max-width: 1025px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#contents #main {
+	float: left;
+	width: 700px;
+}
+@media screen and (max-width: 768px) {
+#contents #main {
+	float: none;
+	width: auto;
+}
+}
+
+
+

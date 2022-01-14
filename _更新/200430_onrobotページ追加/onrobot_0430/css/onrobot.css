@@ -1,0 +1,638 @@
+@charset "utf-8";
+
+body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td
+{ 
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+ }
+
+
+/* !Clearfix
+---------------------------------------------------------- */
+.clearfix {
+	display: block;
+	min-height: 1%;
+}
+.clearfix:after {
+	clear: both;
+	content:".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+* html .clearfix {
+	height: 1%;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+
+/* !Base Fonts -------------------------------------------------------------- */
+a {
+	text-decoration:none;
+	transition: all 0.5s !important;
+	-moz-transition: all 0.5s !important; /* Firefox */
+	-webkit-transition: all 0.5s !important; /* Chrome&Safari */
+}
+
+a:hover {
+	transition: all 0.5s !important;
+	-moz-transition: all 0.5s !important; /* Firefox */
+	-webkit-transition: all 0.5s !important; /* Chrome&Safari */
+}
+
+.op img,
+.op input {
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-ms-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;	
+}
+.op:hover img,
+.op:hover input {
+	opacity: .7;
+	-webkit-opacity: .7;
+	-moz-opacity: .7;
+	filter: alpha(opacity=70);	/* IE lt 8 */
+	-ms-filter: "alpha(opacity=70)"; /* IE 8 */
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-ms-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;
+}
+
+.visiblepc {
+	display: block;
+}
+.visiblets {
+	display: none;
+}
+@media screen and (max-width: 768px) {
+.visiblets {
+	display: block;
+}
+.visiblepc {
+	display: none;
+}
+}
+
+.ftbox {
+	overflow:hidden;
+}
+
+/* !onrobot
+---------------------------------------------------------- */
+.robotsec+.robotsec {
+	margin-top: 60px;
+}
+@media screen and (max-width: 768px) {
+.robotsec+.robotsec {
+	margin-top: 30px;
+}
+.robotsec {
+	padding: 0 15px;
+}
+}
+
+.robothd {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.robothd span {
+	display: block;
+}
+.robothd .robotblue {
+	color: #005ba8;
+}
+.robothd .robothdbig {
+	font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+.robothd {
+	font-size: 18px;
+}
+.robothd .robothdbig {
+	font-size: 22px;
+}
+}
+
+
+/* !onrobot easy
+---------------------------------------------------------- */
+.roboteasy .easydet {
+	background: url(../img/bg_onrobot01.png) center center no-repeat;
+	background-size: cover;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+}
+.roboteasy .easyhdm {
+	background: #e5eff6;
+	text-align: center;
+	padding: 30px 10px;
+	color: #005ba8;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.roboteasy .easyhds {
+	text-align: center;
+	color: #005ba8;
+	font-size: 22px;
+	margin-bottom: 35px;
+}
+.roboteasy .robotreason {
+	overflow: hidden;
+	margin: 0 0 0 -25px;
+}
+.roboteasy .robotreason li {
+	float: left;
+	width: 33.3333%;
+	padding-left: 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.roboteasy .robotreason .reasonimg {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.roboteasy .robotreason .reasontit {
+	text-align: center;
+	margin-bottom: 15px;
+	color: #005ba8;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+.roboteasy .easydet {
+	background: url(../img/bg_onrobot01.png) center center no-repeat;
+	background-size: 100% auto;
+	padding: 0;
+}
+.roboteasy .easyhdm {
+	padding: 20px 10px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.roboteasy .easyhds {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.roboteasy .robotreason {
+	margin: 0;
+}
+.roboteasy .robotreason li {
+	float: none;
+	width: auto;
+	padding-left: 0;
+}
+.roboteasy .robotreason li+li {
+	margin-top: 20px;
+}
+.roboteasy .robotreason .reasontit {
+	font-size: 16px;
+}
+}
+
+
+
+/* !onrobot release
+---------------------------------------------------------- */
+.robotrelease .releasedet {
+	padding: 0 20px;
+	margin-bottom: 30px;
+}
+.robotrelease .releasebox {
+	overflow: hidden;
+}
+.robotrelease .releaseleft {
+	float: left;
+	margin-right: 20px;
+	border: 3px #005ba8 solid;
+	padding: 50px 25px 10px;
+	text-align: center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+}
+.robotrelease .releaseleft span {
+	display: block;
+	color: #005ba8;
+	font-size: 20px;
+	margin-top: 60px;
+}
+.robotrelease .releaseboxtit {
+	border-bottom: 1px #333 solid;
+	padding-bottom: 5px;
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+.robotrelease .releaseboxtit span {
+	color: #005ba8;
+}
+.robotrelease .releaseboxlist {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+.robotrelease .releaseboxlist li {
+	background: url(../img/disc.png) 0 center no-repeat;
+	padding-left: 10px;
+}
+.robotrelease .releaseboxnote {
+	font-size: 15px;
+}
+.robotrelease .releaseboxnote a {
+	color: #005ba8;
+	text-decoration: underline;
+}
+.robotrelease .releasebig {
+	text-align: center;
+	margin-top: 65px;
+}
+
+@media screen and (max-width: 768px) {
+.robotrelease .releasedet {
+	padding: 0;
+	margin-bottom: 20px;
+}
+.robotrelease .releaseleft {
+	float: none;
+	margin-right: 0;
+	text-align: center;
+	border: 2px #005ba8 solid;
+	padding: 50px 10px 10px;
+	margin-bottom: 20px;
+}
+.robotrelease .releaseleft span {
+	font-size: 16px;
+	margin-top: 30px;
+}
+.robotrelease .releaseboxtit {
+	font-size: 18px;
+}
+.robotrelease .releaseboxlist {
+	margin-bottom: 15px;
+}
+.robotrelease .releasebig {
+	margin-top: 30px;
+}
+}
+
+
+
+/* !onrobot products
+---------------------------------------------------------- */
+.robotproducts .productsdet {
+	padding: 0 20px;
+	margin-bottom: 30px;
+}
+.robotproducts .productscol {
+	overflow: hidden;
+	margin: -20px 0 0 -20px;
+}
+.robotproducts .productsbox+.productsbox {
+	margin-top: 50px;
+}
+.robotproducts .productshdm {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #005ba8;
+	font-size: 22px;
+}
+.robotproducts .productscol li {
+	float: left;
+	width: 33.3333%;
+	padding-left: 20px;
+	margin-top: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.robotproducts .productsin {
+	border: 3px #005ba8 solid;
+	text-align: center;
+	padding: 15px 10px 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+}
+.robotproducts .productsimg {
+	text-align: center;
+}
+.robotproducts .productscont {
+	color: #005ba8;
+	font-size: 20px;
+	display: table;
+	width: 100%;
+	line-height: 1.3;
+}
+.robotproducts .productscont span {
+	display: table-cell;
+	width: 100%;
+	text-align: center;
+	vertical-align: bottom;
+}
+.robotproducts .productsbig {
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+.robotproducts .productsdet {
+	padding: 0;
+	margin-bottom: 20px;
+}
+.robotproducts .productscol {
+	overflow: hidden;
+	margin: -20px 0 0 0;
+}
+.robotproducts .productsbox+.productsbox {
+	margin-top: 30px;
+}
+.robotproducts .productshdm {
+	font-size: 18px;
+}
+.robotproducts .productscol li {
+	float: none;
+	width: auto;
+	padding-left: 0;
+}
+.robotproducts .productsin {
+	border: 2px #005ba8 solid;
+	padding: 10px;
+}
+.robotproducts .productscont {
+	font-size: 16px;
+}
+}
+
+
+
+/* !onrobot collaboration
+---------------------------------------------------------- */
+.collaboration .collabox {
+	display: flex;
+	padding: 0 20px;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+.collaboration .collabox .collimg {
+	max-width: 250px;
+}
+.collaboration .collacont {
+	max-width: 330px;
+	padding-bottom: 50px;
+}
+.collaboration .collanote {
+	color: #ff0000;
+	text-indent: -1em;
+	padding-left: 1em;
+	margin-bottom: 20px;
+}
+.collaboration .colladet {
+	color: #005ba8;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.collaboration .collabtn a {
+	background: #005ba8;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.collaboration .collabtn a:hover {
+	opacity: 0.7;
+}
+.collaboration .collabtnimg {
+	width: 60px;
+	padding: 10px 0;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.collaboration .collabtntxt {
+	font-size: 16px;
+	padding: 10px;
+	width: 270px;
+	border-left: 2px #fff solid;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+.collaboration .collabox {
+	display: block;
+	padding: 0;
+}
+.collaboration .collabox .collimg {
+	max-width: none;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.collaboration .collacont {
+	max-width: none;
+	padding-bottom: 0;
+}
+.collaboration .colladet {
+	font-size: 16px;
+}
+.collaboration .collabtnimg {
+	padding: 10px;
+}
+.collaboration .collabtntxt {
+	font-size: 14px;
+	width: auto;
+}
+}
+
+
+
+/* !onrobot contact
+---------------------------------------------------------- */
+.robotform {
+	margin-top: 20px;
+}
+.robotformhd {
+	margin-bottom: 15px;
+	color: #000;
+	font-size: 32px;
+	padding: 0 5px;
+	border-bottom: 2px #005ba8 solid;
+}
+.robotformdet {
+	color: #005ba8;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+.robotform {
+	padding: 0 15px;
+}
+.robotformhd {
+	font-size: 24px;
+}
+.robotformdet {
+	font-size: 18px;
+}
+}
+
+
+.robotformbox {
+	background: url(../img/bg_onrobot02.png) right 15px no-repeat #f7f7f7;
+	padding: 20px 50px 60px;
+}
+.robotformbox table {
+	width: 100%;
+}
+.robotformbox table th,.robotformbox table td {
+	vertical-align: middle;
+	padding: 15px 0;
+}
+.robotformbox table th {
+	width: 40%;
+}
+.robotformbox table .must {
+	background: url(../img/must.png) right center no-repeat;
+	padding-right: 40px;
+	display: inline-block;
+}
+.robotformbox table .optional {
+	background: url(../img/optional.png) right center no-repeat;
+	padding-right: 40px;
+	display: inline-block;
+}
+.robotformbox table textarea {
+	width: 100%;
+	background: #fff;
+	height: 100px;
+	border: 1px #b5b5b5 solid;
+}
+.robotformbox table input[type=text] {
+	width: 100%;
+	background: #fff;
+	height: 22px;
+	border: 1px #b5b5b5 solid;
+}
+.robotchecklist {
+	padding: 0 15px 45px;
+}
+.robotchecklist li+li {
+	margin-top: 5px;
+}
+.robotcheckbox:checked {
+	background:#1673ff;
+	outline: none;
+}
+.robotcheckbox {
+	width:16px;
+	height:16px;
+	background-color:#fff;
+	border:solid 1px #333;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	font-size:0.8rem;
+	margin:0;
+	padding:0;
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:default;
+	-webkit-appearance:none;
+	-webkit-user-select:none;
+	user-select:none;
+	-webkit-transition:background-color ease 0.1s;
+	transition:background-color ease 0.1s;
+	outline: none;
+}
+.robotcheckbox:checked::after {
+	content:'';
+	top:3px;
+	left:3px;
+	position:absolute;
+	background:transparent;
+	border:#fff solid 2px;
+	border-top:none;
+	border-right:none;
+	width:6px;
+	height:4px;
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+.robotformtxt {
+	text-align: center;
+	margin-top: 30px;
+}
+.robotformbtn {
+	text-align: center;
+	margin-top: 20px;
+}
+.robotformbtn input[type=submit] {
+	background: #005ba8;
+	width: 100px;
+	height: 45px;
+	text-align: center;
+	color: #fff;
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.robotformbox {
+	padding: 20px 15px;
+}
+.robotformbox table {
+	width: 100%;
+}
+.robotformbox table th,.robotformbox table td {
+	display: block;
+	padding: 10px 0;
+}
+.robotformbox table th {
+	width: auto;
+}
+.robotchecklist {
+	padding: 0 15px;
+}
+.robotformtxt {
+	margin-top: 20px;
+}
+
+}
+
+
+

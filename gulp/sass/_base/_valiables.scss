@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------
+// * Valiables
+// ----------------------------------------------------------------
+$break: 768px; //ipad横（1024px）までがスマホ表示想定
+$supported-browsers: 'chrome', 'firefox', 'safari', 'ie', 'ios-safari', 'android';
+$browser-minimum-versions: ('ie': '10');
+
+// フォントファミリー
+
+// $ff-go: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', sans-serif;
+// $ff-go: Arial, Helvetica, "Droid Sans", 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+$ff-go: 'Renner*'; //FUTURAに似たウェブフォント
+
+// $ff-min: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+$ff-min: 'リュウミン R-KL', 'Ryumin Regular KL', serif;
+
+// trajan-pro-3
+$ff-en: 'Noto Serif', serif;
+$ff-en2: 'Open Sans', sans-serif;
+
+$ff-icon: 'Font Awesome 5 Free';
+$ff-num: 'Roboto', sans-serif;
+
+
+/* カラー */
+
+// リンクカラー
+$c-link: #1a9153;
+$c-hover: #bea654;
+
+// 黒
+$c-black: #222222;
+// グレー
+$c-gray: #a3a7ad;
+// 白
+$c-gray_light: #efefef;
+
+// ベースカラー
+$c-base: #03031d; //または 0a1324
+$c-base_light: #0c0c33; //または 0a1324
+// メインカラー
+$c-main: #02633b;
+// サブカラー
+$c-sub: #0c1f3f;
+// キーカラー（アクセントカラー）
+$c-key: #ad956f;
+// 注意カラー
+$c-attention: #b18f58;
