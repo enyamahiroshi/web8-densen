@@ -41,9 +41,9 @@
     <div class="footer_nav clr">
 
       <?php // 75thロゴ ?>
-      <div class="footer_75th_link">
+      <!--<div class="footer_75th_link">
         <a class="logo_75th" href="http://" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo-75th.png" alt="75thロゴ"></a>
-      </div>
+      </div>-->
     	<?php //ロゴとロゴ周り ?>
     	<div class="footer_nav_head">
       	<img class="footer_logo" src="<?php echo get_template_directory_uri(); ?>/img/common/logo1.png" alt="デンセンロゴ">

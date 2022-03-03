@@ -7,6 +7,11 @@
 node_modules/
 package-lock.json
 
+/wp-admin/*
+/wp-includes/*
+/wp-content/*
+/wp-content/themes/CenterColumn01/
+
 _更新/
 
 制作データ/

@@ -43,7 +43,7 @@
 <header>
 	<?php // ロゴ ?>
 	<div class="head_logo">
-		<a class="logo_75th" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo-75th.png" alt="75thロゴ"></a>
+		<!--<a class="logo_75th" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo-75th.png" alt="75thロゴ"></a>-->
   	<a class="logo_main" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo1.png" alt="デンセンロゴ"></a>
   </div>
 	<?php // グローバルメニュー(PC view) ?>

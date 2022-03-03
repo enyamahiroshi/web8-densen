@@ -70,7 +70,7 @@
   	<ul class="side_bnr_link">
     	<li><a href="https://eclub.densen.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner/banner_top_club.png" alt="デンセンクラブ"></a></li>
       <li><a href="https://www.densen.co.jp/kenshu_center/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner/banner_kensyucenter.png" alt="デンセン elife研修センター"></a></li>
-      <li><a class="side-banner-link" href="https://www.densen.co.jp/news/6456/"><img src="https://www.densen.co.jp/wp-content/uploads/2020/03/2b-1.jpg" alt="GOALS"></a></li>
+      <li><a class="side-banner-link" href="https://www.densen.co.jp/sdgs/"><img src="https://www.densen.co.jp/wp-content/uploads/2020/03/2b-1.jpg" alt="GOALS"></a></li>
       <li><a href="https://www.densen.co.jp/news/6470/"><img src="https://www.densen.co.jp/wp-content/uploads/2020/02/banner-kosodatesengen-mini-bana-kosodate.png" alt="社員の子育て応援宣言"></a></li>
       <li><a class="side-banner-link" href="https://www.densen.co.jp/news/6449/"><img src="https://www.densen.co.jp/wp-content/uploads/2020/02/kosodatesengen-mini-bana-advense.png" alt="職場いきいきアドバンスカンパニー"></a></li>
     </ul>

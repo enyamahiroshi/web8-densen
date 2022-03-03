@@ -19,7 +19,7 @@ $orglabel = array(
 	'ttnotfound'        => '投稿が見つかりませんでした', //（投稿が見つかりませんでした）
 	'ttnotfoundintrash' => 'ゴミ箱の投稿にも見つかりませんでした' //（ゴミ箱の投稿にも見つかりませんでした）
 );
-// ダッシュボードの「投稿」メニュー項目名の変更
+// ダッシュボードの「投稿」メニュー項目名の変更	
 function change_post_menu_label() {
 	global $orglabel;
 	global $menu;
@@ -111,7 +111,7 @@ function gs_attachment_template_redirect() {
 // 抜粋文字の文字数設定
 function new_excerpt_mblength($length) {
 	return 60;
-}
+}	
 add_filter('excerpt_mblength', 'new_excerpt_mblength');
 // 抜粋文字にリンクなしバージョン
 function new_excerpt_more($more) {
@@ -302,13 +302,9 @@ return $result;
 }
 
 
-// Simple Membership プラグインカスタマイズ
-add_filter( 'swpm_not_logged_in_post_msg', function( $error_msg ) {
-	$error_msg = '<div class="swpm-post-not-logged-in-msg"><p>このコンテンツを閲覧するにはログインが必要です。</p><p>会員の方は、<a class="swpm-login-link" href="../membership-login/">ログイン</a> してください。<br>または、こちらから <a class="swpm-login-link" href="../membership-registration/">新規会員登録</a></p></div>';
-	return $error_msg;
-} );
 
-
+		
+		
 // カテゴリーの選択を1つしかできないように制限する：http://www.nxworld.net/wordpress/wp-limit-category-select.html
 add_action( 'admin_print_footer_scripts', 'limit_category_select' );
 function limit_category_select() {
@@ -327,7 +323,7 @@ function limit_category_select() {
 				$(this).parents('.cat-checklist').find('input[type=checkbox]').attr('checked', false);
 				$(this).attr('checked', true);
 			});
-
+		    
 			$('.categorychecklist>li:first-child, .cat-checklist>li:first-child').before('<p style="padding-top:5px;">カテゴリーは1つしか選択できません</p>');
 		});
 	</script>
